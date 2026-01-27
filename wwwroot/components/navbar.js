@@ -98,8 +98,10 @@
       
       <nav>
         <div class="nav-container">
-          <a href="#home" class="logo">QuantumCoder</a>
-          
+<a href="#home" class="logo" style="display: flex; align-items: center; gap: 0.5rem;">
+  <img src="logo.png" alt="Logo" style="height: 32px; width: 32px; object-fit: contain;">
+  Imen Jouini
+</a>
           <button class="mobile-menu-btn">
             <i data-feather="menu"></i>
           </button>
