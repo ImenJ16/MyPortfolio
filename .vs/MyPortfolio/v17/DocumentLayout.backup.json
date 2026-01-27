@@ -68,7 +68,7 @@
               "RelativeDocumentMoniker": "wwwroot\\index.html",
               "ToolTip": "C:\\Projects\\MyPortfolio\\wwwroot\\index.html",
               "RelativeToolTip": "wwwroot\\index.html",
-              "ViewState": "AgIAAJ8BAAAAAAAAAAAgwK0BAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAACYBAAAAAAAAAAAmwGkBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2026-01-26T18:06:12.688Z",
               "EditorCaption": ""
@@ -131,8 +131,7 @@
               "RelativeToolTip": "wwwroot\\components\\footer.js",
               "ViewState": "AgIAACoAAAAAAAAAAAAkwDYAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-01-26T18:05:36.56Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-26T18:05:36.56Z"
             },
             {
               "$type": "Document",
