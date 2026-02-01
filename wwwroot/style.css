@@ -69,3 +69,12 @@ section {
     .custom-shape-divider-bottom-1 .shape-fill {
         fill: #0f172a;
     }
+
+
+.tag {
+    padding: 0.25rem 0.5rem;
+    background: rgba(99,102,241,0.1);
+    color: #6366f1;
+    font-size: 0.75rem;
+    border-radius: 9999px;
+}

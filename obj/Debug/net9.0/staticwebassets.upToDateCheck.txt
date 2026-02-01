@@ -52,8 +52,8 @@ wwwroot\logoicon.png
 wwwroot\photo.PNG
 wwwroot\sample-data\weather.json
 wwwroot\script.js
-wwwroot\style.css
 wwwroot\index.html
+wwwroot\style.css
 C:\Projects\MyPortfolio\wwwroot\components\footer.js
 C:\Projects\MyPortfolio\wwwroot\components\navbar.js
 C:\Projects\MyPortfolio\wwwroot\css\app.css
@@ -103,5 +103,5 @@ C:\Projects\MyPortfolio\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
 C:\Projects\MyPortfolio\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 C:\Projects\MyPortfolio\wwwroot\sample-data\weather.json
 C:\Projects\MyPortfolio\wwwroot\script.js
-C:\Projects\MyPortfolio\wwwroot\style.css
 C:\Projects\MyPortfolio\wwwroot\index.html
+C:\Projects\MyPortfolio\wwwroot\style.css
