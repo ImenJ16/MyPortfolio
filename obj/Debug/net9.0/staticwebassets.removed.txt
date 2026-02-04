@@ -1,3 +1,0 @@
-C:\Projects\MyPortfolio\wwwroot\assets\logo.png
-C:\Projects\MyPortfolio\wwwroot\assets\logoicon.png
-C:\Projects\MyPortfolio\wwwroot\assets\photo.PNG
