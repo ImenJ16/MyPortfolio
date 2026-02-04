@@ -1,8 +1,10 @@
+wwwroot\components\footer.js
 wwwroot\components\navbar.js
 wwwroot\css\app.css
+wwwroot\esprit.jpg
 wwwroot\favicon.png
 wwwroot\icon-192.png
-wwwroot\index.html
+wwwroot\istmt.png
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
@@ -53,10 +55,10 @@ wwwroot\photo.PNG
 wwwroot\sample-data\weather.json
 wwwroot\script.js
 wwwroot\style.css
-wwwroot\components\footer.js
+wwwroot\index.html
+C:\Projects\MyPortfolio\wwwroot\components\footer.js
 C:\Projects\MyPortfolio\wwwroot\components\navbar.js
 C:\Projects\MyPortfolio\wwwroot\css\app.css
-C:\Projects\MyPortfolio\wwwroot\index.html
 C:\Projects\MyPortfolio\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 C:\Projects\MyPortfolio\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 C:\Projects\MyPortfolio\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
@@ -104,4 +106,4 @@ C:\Projects\MyPortfolio\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 C:\Projects\MyPortfolio\wwwroot\sample-data\weather.json
 C:\Projects\MyPortfolio\wwwroot\script.js
 C:\Projects\MyPortfolio\wwwroot\style.css
-C:\Projects\MyPortfolio\wwwroot\components\footer.js
+C:\Projects\MyPortfolio\wwwroot\index.html
