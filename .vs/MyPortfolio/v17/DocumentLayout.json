@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Projects\\MyPortfolio\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9EF43A48-FF18-84B6-38DE-3F3AA66C9291}|MyPortfolio.csproj|c:\\projects\\myportfolio\\wwwroot\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{9EF43A48-FF18-84B6-38DE-3F3AA66C9291}|MyPortfolio.csproj|solutionrelative:wwwroot\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9EF43A48-FF18-84B6-38DE-3F3AA66C9291}|MyPortfolio.csproj|c:\\projects\\myportfolio\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9EF43A48-FF18-84B6-38DE-3F3AA66C9291}|MyPortfolio.csproj|solutionrelative:wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9EF43A48-FF18-84B6-38DE-3F3AA66C9291}|MyPortfolio.csproj|c:\\projects\\myportfolio\\wwwroot\\components\\footer.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{9EF43A48-FF18-84B6-38DE-3F3AA66C9291}|MyPortfolio.csproj|solutionrelative:wwwroot\\components\\footer.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9EF43A48-FF18-84B6-38DE-3F3AA66C9291}|MyPortfolio.csproj|c:\\projects\\myportfolio\\wwwroot\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{9EF43A48-FF18-84B6-38DE-3F3AA66C9291}|MyPortfolio.csproj|solutionrelative:wwwroot\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9EF43A48-FF18-84B6-38DE-3F3AA66C9291}|MyPortfolio.csproj|c:\\projects\\myportfolio\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,13 +58,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Projects\\MyPortfolio\\wwwroot\\index.html",
               "RelativeDocumentMoniker": "wwwroot\\index.html",
               "ToolTip": "C:\\Projects\\MyPortfolio\\wwwroot\\index.html",
               "RelativeToolTip": "wwwroot\\index.html",
-              "ViewState": "AgIAABQCAAAAAAAAAAAAACICAABGAAAAAAAAAA==",
+              "ViewState": "AgIAAOUDAAAAAAAAAAAAAPQDAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2026-01-26T18:06:12.688Z",
               "EditorCaption": ""
@@ -83,13 +83,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "style.css",
               "DocumentMoniker": "C:\\Projects\\MyPortfolio\\wwwroot\\style.css",
               "RelativeDocumentMoniker": "wwwroot\\style.css",
               "ToolTip": "C:\\Projects\\MyPortfolio\\wwwroot\\style.css",
               "RelativeToolTip": "wwwroot\\style.css",
-              "ViewState": "AgIAAKEAAAAAAAAAAAAAAKEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-01-26T18:03:49.216Z",
               "EditorCaption": ""
@@ -108,19 +108,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "script.js",
               "DocumentMoniker": "C:\\Projects\\MyPortfolio\\wwwroot\\script.js",
               "RelativeDocumentMoniker": "wwwroot\\script.js",
               "ToolTip": "C:\\Projects\\MyPortfolio\\wwwroot\\script.js",
               "RelativeToolTip": "wwwroot\\script.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAYwDoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-01-26T18:02:48.254Z"
+              "WhenOpened": "2026-01-26T18:02:48.254Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "footer.js",
               "DocumentMoniker": "C:\\Projects\\MyPortfolio\\wwwroot\\components\\footer.js",
               "RelativeDocumentMoniker": "wwwroot\\components\\footer.js",
