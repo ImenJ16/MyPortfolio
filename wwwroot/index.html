@@ -98,202 +98,349 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="py-20">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-primary">Projects</h2>
-                <p class="text-lg opacity-90 max-w-2xl mx-auto mt-4">
-                    Academic, professional, and entrepreneurial work
-                </p>
-            </div>
+        <!-- Projects Section - Redesigned -->
+        <section id="projects" class="py-20 relative overflow-hidden">
+            <!-- Background Elements -->
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent"></div>
+            <div class="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
 
-            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- Project 1 : BREATHE -->
-                <div class="project bg-gradient-to-br from-dark to-dark/80 border border-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gradient-to-r from-primary/20 to-secondary/20 flex items-center justify-center">
-                        <i data-feather="wind" class="w-16 h-16 text-primary"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">BREATHE</h3>
-                        <p class="text-gray-400 mb-4">
-                            Smart gas detection solution designed to prevent household gas-related incidents in Tunisia.
-                            Led as CEO in a student startup structure, winning multiple innovation awards.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tag">Entrepreneurship</span>
-                            <span class="tag">IoT</span>
-                            <span class="tag">Product Strategy</span>
-                        </div>
-                    </div>
+            <div class="relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-primary mb-4">Featured Projects</h2>
+                    <p class="text-lg opacity-90 max-w-2xl mx-auto">
+                        Innovative solutions across entrepreneurship, AI, and full-stack development
+                    </p>
                 </div>
 
-                <!-- Project 2 : DanceScape Explorer -->
-                <div class="project bg-gradient-to-br from-dark to-dark/80 border border-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gradient-to-r from-primary/20 to-secondary/20 flex items-center justify-center">
-                        <i data-feather="music" class="w-16 h-16 text-primary"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">DanceScape Explorer</h3>
-                        <p class="text-gray-400 mb-4">
-                            Online dance competition platform selected for the 11th edition of ESPRIT’s Bal des Projets.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tag">Spring Boot</span>
-                            <span class="tag">Angular</span>
-                            <span class="tag">Docker</span>
-                            <span class="tag">Jenkins</span>
-                            <span class="tag">FlutterFlow</span>
-                            <span class="tag">Firebase</span>
+                <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto px-4">
+
+                    <!-- Project 1: BREATHE -->
+                    <div class="project-card group relative bg-gradient-to-br from-dark/90 to-dark/70 border border-gray-800/50 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
+                        <!-- Accent Bar -->
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+
+                        <!-- Icon Container -->
+                        <div class="p-6 pb-4">
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i data-feather="wind" class="w-7 h-7 text-primary"></i>
+                            </div>
+
+                            <h3 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">BREATHE</h3>
+                            <p class="text-gray-400 mb-4 leading-relaxed line-clamp-3">
+                                Smart gas detection solution designed to prevent household gas-related incidents in Tunisia.
+                                Led as CEO in a student startup structure, winning multiple innovation awards.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="tag">Entrepreneurship</span>
+                                <span class="tag">IoT</span>
+                                <span class="tag">Product Strategy</span>
+                            </div>
+                        </div>
+
+                        <!-- See More Link -->
+                        <div class="px-6 pb-6">
+                            <a href="#" class="inline-flex items-center text-primary font-semibold group/link hover:gap-3 transition-all">
+                                <span>See More</span>
+                                <i data-feather="arrow-right" class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+
+                        <!-- Hover Glow Effect -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-2xl"></div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Project 3 : AI-Powered Travel Management System -->
-                <div class="project bg-gradient-to-br from-dark to-dark/80 border border-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gradient-to-r from-primary/20 to-secondary/20 flex items-center justify-center">
-                        <i data-feather="map" class="w-16 h-16 text-primary"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">AI-Powered Travel Management System</h3>
-                        <p class="text-gray-400 mb-4">
-                            End-of-study internship project featuring an AI RAG-based multilingual customer service agent integrated into a Blazor system.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tag">.NET 9</span>
-                            <span class="tag">Blazor</span>
-                            <span class="tag">RAG</span>
-                            <span class="tag">FastAPI</span>
-                            <span class="tag">SQL Server</span>
+                    <!-- Project 2: DanceScape Explorer -->
+                    <div class="project-card group relative bg-gradient-to-br from-dark/90 to-dark/70 border border-gray-800/50 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+
+                        <div class="p-6 pb-4">
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i data-feather="music" class="w-7 h-7 text-primary"></i>
+                            </div>
+
+                            <h3 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">DanceScape Explorer</h3>
+                            <p class="text-gray-400 mb-4 leading-relaxed line-clamp-3">
+                                Online dance competition platform selected for the 11th edition of ESPRIT's Bal des Projets.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="tag">Spring Boot</span>
+                                <span class="tag">Angular</span>
+                                <span class="tag">Docker</span>
+                                <span class="tag">Jenkins</span>
+                                <span class="tag">FlutterFlow</span>
+                                <span class="tag">Firebase</span>
+                            </div>
+                        </div>
+
+                        <div class="px-6 pb-6">
+                            <a href="#" class="inline-flex items-center text-primary font-semibold group/link hover:gap-3 transition-all">
+                                <span>See More</span>
+                                <i data-feather="arrow-right" class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-2xl"></div>
                         </div>
                     </div>
-                </div>
 
-                <!-- ================= HIDDEN PROJECTS ================= -->
-                <!-- LINK -->
-                <div class="project hidden bg-gradient-to-br from-dark to-dark/80 border border-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gradient-to-r from-primary/20 to-secondary/20 flex items-center justify-center">
-                        <i data-feather="eye" class="w-16 h-16 text-primary"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">LINK</h3>
-                        <p class="text-gray-400 mb-4">
-                            Desktop application providing a one-page learning dashboard tailored for dyslexic children.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tag">Python</span>
-                            <span class="tag">Tkinter</span>
-                            <span class="tag">OCR</span>
-                            <span class="tag">Text-to-Speech</span>
+                    <!-- Project 3: AI-Powered Travel Management System -->
+                    <div class="project-card group relative bg-gradient-to-br from-dark/90 to-dark/70 border border-gray-800/50 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+
+                        <div class="p-6 pb-4">
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i data-feather="map" class="w-7 h-7 text-primary"></i>
+                            </div>
+
+                            <h3 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">AI-Powered Travel Management System</h3>
+                            <p class="text-gray-400 mb-4 leading-relaxed line-clamp-3">
+                                End-of-study internship project featuring an AI RAG-based multilingual customer service agent integrated into a Blazor system.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="tag">.NET 9</span>
+                                <span class="tag">Blazor</span>
+                                <span class="tag">RAG</span>
+                                <span class="tag">FastAPI</span>
+                                <span class="tag">SQL Server</span>
+                            </div>
+                        </div>
+
+                        <div class="px-6 pb-6">
+                            <a href="#" class="inline-flex items-center text-primary font-semibold group/link hover:gap-3 transition-all">
+                                <span>See More</span>
+                                <i data-feather="arrow-right" class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-2xl"></div>
                         </div>
                     </div>
-                </div>
 
-                <!-- ELECTIO -->
-                <div class="project hidden bg-gradient-to-br from-dark to-dark/80 border border-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gradient-to-r from-primary/20 to-secondary/20 flex items-center justify-center">
-                        <i data-feather="check-square" class="w-16 h-16 text-primary"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">ELECTIO</h3>
-                        <p class="text-gray-400 mb-4">
-                            Desktop application for the digitalization of the election process, including voter and bureau management.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tag">C</span>
-                            <span class="tag">Ubuntu</span>
-                            <span class="tag">Systems Programming</span>
+                    <!-- ================= HIDDEN PROJECTS ================= -->
+                    <!-- LINK -->
+                    <div class="project-card hidden group relative bg-gradient-to-br from-dark/90 to-dark/70 border border-gray-800/50 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+
+                        <div class="p-6 pb-4">
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i data-feather="eye" class="w-7 h-7 text-primary"></i>
+                            </div>
+
+                            <h3 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">LINK</h3>
+                            <p class="text-gray-400 mb-4 leading-relaxed line-clamp-3">
+                                Desktop application providing a one-page learning dashboard tailored for dyslexic children.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="tag">Python</span>
+                                <span class="tag">Tkinter</span>
+                                <span class="tag">OCR</span>
+                                <span class="tag">Text-to-Speech</span>
+                            </div>
+                        </div>
+
+                        <div class="px-6 pb-6">
+                            <a href="#" class="inline-flex items-center text-primary font-semibold group/link hover:gap-3 transition-all">
+                                <span>See More</span>
+                                <i data-feather="arrow-right" class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-2xl"></div>
                         </div>
                     </div>
-                </div>
 
-                <!-- LOCATOUR CAR -->
-                <div class="project hidden bg-gradient-to-br from-dark to-dark/80 border border-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gradient-to-r from-primary/20 to-secondary/20 flex items-center justify-center">
-                        <i data-feather="truck" class="w-16 h-16 text-primary"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">LOCATOUR CAR</h3>
-                        <p class="text-gray-400 mb-4">
-                            Web and desktop solution for vehicle rental management with scheduling, QR codes, and booking control.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tag">JavaFX</span>
-                            <span class="tag">Symfony</span>
-                            <span class="tag">MySQL</span>
+                    <!-- ELECTIO -->
+                    <div class="project-card hidden group relative bg-gradient-to-br from-dark/90 to-dark/70 border border-gray-800/50 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+
+                        <div class="p-6 pb-4">
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i data-feather="check-square" class="w-7 h-7 text-primary"></i>
+                            </div>
+
+                            <h3 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">ELECTIO</h3>
+                            <p class="text-gray-400 mb-4 leading-relaxed line-clamp-3">
+                                Desktop application for the digitalization of the election process, including voter and bureau management.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="tag">C</span>
+                                <span class="tag">Ubuntu</span>
+                                <span class="tag">Systems Programming</span>
+                            </div>
+                        </div>
+
+                        <div class="px-6 pb-6">
+                            <a href="#" class="inline-flex items-center text-primary font-semibold group/link hover:gap-3 transition-all">
+                                <span>See More</span>
+                                <i data-feather="arrow-right" class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-2xl"></div>
                         </div>
                     </div>
-                </div>
 
-                <!-- SAL7A AI -->
-                <div class="project hidden bg-gradient-to-br from-dark to-dark/80 border border-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gradient-to-r from-primary/20 to-secondary/20 flex items-center justify-center">
-                        <i data-feather="mic" class="w-16 h-16 text-primary"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Sal7a AI</h3>
-                        <p class="text-gray-400 mb-4">
-                            Voice-controlled Tunisian AI assistant with task management, weather, timers, and natural interactions.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tag">Python</span>
-                            <span class="tag">Flask</span>
-                            <span class="tag">LLMs</span>
+                    <!-- LOCATOUR CAR -->
+                    <div class="project-card hidden group relative bg-gradient-to-br from-dark/90 to-dark/70 border border-gray-800/50 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+
+                        <div class="p-6 pb-4">
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i data-feather="truck" class="w-7 h-7 text-primary"></i>
+                            </div>
+
+                            <h3 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">LOCATOUR CAR</h3>
+                            <p class="text-gray-400 mb-4 leading-relaxed line-clamp-3">
+                                Web and desktop solution for vehicle rental management with scheduling, QR codes, and booking control.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="tag">JavaFX</span>
+                                <span class="tag">Symfony</span>
+                                <span class="tag">MySQL</span>
+                            </div>
+                        </div>
+
+                        <div class="px-6 pb-6">
+                            <a href="#" class="inline-flex items-center text-primary font-semibold group/link hover:gap-3 transition-all">
+                                <span>See More</span>
+                                <i data-feather="arrow-right" class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-2xl"></div>
                         </div>
                     </div>
-                </div>
 
-                <!-- STUDIO AL AMAL -->
-                <div class="project hidden bg-gradient-to-br from-dark to-dark/80 border border-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gradient-to-r from-primary/20 to-secondary/20 flex items-center justify-center">
-                        <i data-feather="layers" class="w-16 h-16 text-primary"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">StudioAlAmal</h3>
-                        <p class="text-gray-400 mb-4">
-                            Personal microservices-based platform featuring JWT authentication and unified third-party data aggregation.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tag">Blazor Server</span>
-                            <span class="tag">.NET 9</span>
-                            <span class="tag">JWT</span>
-                            <span class="tag">SQL Server</span>
+                    <!-- SAL7A AI -->
+                    <div class="project-card hidden group relative bg-gradient-to-br from-dark/90 to-dark/70 border border-gray-800/50 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+
+                        <div class="p-6 pb-4">
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i data-feather="mic" class="w-7 h-7 text-primary"></i>
+                            </div>
+
+                            <h3 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Sal7a AI</h3>
+                            <p class="text-gray-400 mb-4 leading-relaxed line-clamp-3">
+                                Voice-controlled Tunisian AI assistant with task management, weather, timers, and natural interactions.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="tag">Python</span>
+                                <span class="tag">Flask</span>
+                                <span class="tag">LLMs</span>
+                            </div>
+                        </div>
+
+                        <div class="px-6 pb-6">
+                            <a href="#" class="inline-flex items-center text-primary font-semibold group/link hover:gap-3 transition-all">
+                                <span>See More</span>
+                                <i data-feather="arrow-right" class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-2xl"></div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Project : GitPulse Chrome Extension -->
-                <div class="project hidden bg-gradient-to-br from-dark to-dark/80 border border-gray-800 rounded-xl overflow-hidden">
-                    <div class="h-48 bg-gradient-to-r from-primary/20 to-secondary/20 flex items-center justify-center">
-                        <i data-feather="bell" class="w-16 h-16 text-primary"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Github Activity Notifier</h3>
-                        <p class="text-gray-400 mb-4">
-                            Chrome extension providing instant notifications when users follow you or star your repositories,
-                            with a backend API tracking visit counts and visit timestamps.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tag">Chrome Extension</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">REST API</span>
-                            <span class="tag">Cloudfare</span>
-                            <span class="tag">Analytics</span>
+                    <!-- STUDIO AL AMAL -->
+                    <div class="project-card hidden group relative bg-gradient-to-br from-dark/90 to-dark/70 border border-gray-800/50 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+
+                        <div class="p-6 pb-4">
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i data-feather="layers" class="w-7 h-7 text-primary"></i>
+                            </div>
+
+                            <h3 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">StudioAlAmal</h3>
+                            <p class="text-gray-400 mb-4 leading-relaxed line-clamp-3">
+                                Personal microservices-based platform featuring JWT authentication and unified third-party data aggregation.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="tag">Blazor Server</span>
+                                <span class="tag">.NET 9</span>
+                                <span class="tag">JWT</span>
+                                <span class="tag">SQL Server</span>
+                            </div>
+                        </div>
+
+                        <div class="px-6 pb-6">
+                            <a href="#" class="inline-flex items-center text-primary font-semibold group/link hover:gap-3 transition-all">
+                                <span>See More</span>
+                                <i data-feather="arrow-right" class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-2xl"></div>
                         </div>
                     </div>
+
+                    <!-- GitHub Activity Notifier -->
+                    <div class="project-card hidden group relative bg-gradient-to-br from-dark/90 to-dark/70 border border-gray-800/50 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+
+                        <div class="p-6 pb-4">
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i data-feather="bell" class="w-7 h-7 text-primary"></i>
+                            </div>
+
+                            <h3 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Github Activity Notifier</h3>
+                            <p class="text-gray-400 mb-4 leading-relaxed line-clamp-3">
+                                Chrome extension providing instant notifications when users follow you or star your repositories,
+                                with a backend API tracking visit counts and visit timestamps.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="tag">Chrome Extension</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">REST API</span>
+                                <span class="tag">Cloudfare</span>
+                                <span class="tag">Analytics</span>
+                            </div>
+                        </div>
+
+                        <div class="px-6 pb-6">
+                            <a href="#" class="inline-flex items-center text-primary font-semibold group/link hover:gap-3 transition-all">
+                                <span>See More</span>
+                                <i data-feather="arrow-right" class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-2xl"></div>
+                        </div>
+                    </div>
+
                 </div>
 
-
-            </div>
-
-            <!-- Toggle Button -->
-            <div class="text-center mt-10">
-                <button id="toggle-projects" class="px-6 py-3 bg-primary text-white rounded-full hover:bg-primary/80 transition">
-                    Load More
-                </button>
+                <!-- Toggle Button -->
+                <div class="text-center mt-12">
+                    <button id="toggle-projects" class="group relative px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-full font-semibold overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/50 hover:scale-105">
+                        <span class="relative z-10">Load More Projects</span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </button>
+                </div>
             </div>
         </section>
 
+  
 
         <!-- Experience Section -->
         <section id="experience" class="py-20">
@@ -549,7 +696,7 @@
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold text-primary">Education</h2>
                 <p class="text-lg opacity-90 max-w-2xl mx-auto mt-4">
-                    My academic background 
+                    My academic background
                 </p>
             </div>
 
@@ -705,4 +852,39 @@
             document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
         }
     });
+
+    // Make sure to call this after the DOM loads
+    feather.replace();
+
+    // Toggle projects functionality
+    document.getElementById('toggle-projects').addEventListener('click', function () {
+        const hiddenProjects = document.querySelectorAll('.project-card.hidden');
+        const button = this;
+
+        if (hiddenProjects.length > 0) {
+            // Show hidden projects
+            hiddenProjects.forEach(project => {
+                project.classList.remove('hidden');
+            });
+            button.innerHTML = '<span class="relative z-10">Show Less</span><div class="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>';
+        } else {
+            // Hide all projects except the first 3
+            const allProjects = document.querySelectorAll('.project-card');
+            allProjects.forEach((project, index) => {
+                if (index >= 3) {
+                    project.classList.add('hidden');
+                }
+            });
+            button.innerHTML = '<span class="relative z-10">Load More Projects</span><div class="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>';
+
+            // Scroll back to projects section
+            document.getElementById('projects').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Re-initialize feather icons for newly shown projects
+        feather.replace();
+    });
+
 </script>
+
+
