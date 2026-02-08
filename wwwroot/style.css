@@ -477,3 +477,36 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+
+/* ============================================
+   FULL-WIDTH EXPERIENCE SECTION
+   ADD THIS TO YOUR style.css FILE
+   ============================================ */
+
+/* Experience Row Hover Effects */
+.experience-row {
+    transition: transform 0.3s ease;
+}
+
+    .experience-row:hover {
+        transform: translateX(8px);
+    }
+
+    /* Icon Container Hover */
+    .experience-row .group:hover > div > div > div:first-child {
+        box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+    }
+
+    /* Smooth transitions */
+    .experience-row h3,
+    .experience-row .w-16 {
+        transition: all 0.3s ease;
+    }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .experience-row:hover {
+        transform: translateX(0);
+    }
+}
