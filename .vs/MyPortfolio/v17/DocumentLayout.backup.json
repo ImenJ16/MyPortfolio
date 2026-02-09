@@ -64,7 +64,7 @@
               "RelativeDocumentMoniker": "wwwroot\\index.html",
               "ToolTip": "C:\\Projects\\MyPortfolio\\wwwroot\\index.html",
               "RelativeToolTip": "wwwroot\\index.html",
-              "ViewState": "AgIAACACAAAAAAAAAAAQwCwCAABcAAAAAAAAAA==",
+              "ViewState": "AgIAAAABAAAAAAAAAAAAABABAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2026-01-26T18:06:12.688Z",
               "EditorCaption": ""
@@ -79,8 +79,7 @@
               "RelativeToolTip": "wwwroot\\components\\navbar.js",
               "ViewState": "AgIAAFsAAAAAAAAAAAAIwGcAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-01-26T18:05:06.048Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-26T18:05:06.048Z"
             },
             {
               "$type": "Document",
@@ -92,8 +91,7 @@
               "RelativeToolTip": "wwwroot\\style.css",
               "ViewState": "AgIAAO4BAAAAAAAAAAAgwPYBAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-01-26T18:03:49.216Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-26T18:03:49.216Z"
             },
             {
               "$type": "Document",
@@ -127,7 +125,7 @@
               "RelativeDocumentMoniker": "wwwroot\\components\\footer.js",
               "ToolTip": "C:\\Projects\\MyPortfolio\\wwwroot\\components\\footer.js",
               "RelativeToolTip": "wwwroot\\components\\footer.js",
-              "ViewState": "AgIAAHQAAAAAAAAAAAAYwIcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHIAAAAAAAAAAAApwH4AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2026-01-26T18:05:36.56Z",
               "EditorCaption": ""

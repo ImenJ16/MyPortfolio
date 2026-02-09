@@ -7,9 +7,12 @@ wwwroot\DE.png
 wwwroot\electio.png
 wwwroot\esprit.jpg
 wwwroot\favicon.png
+wwwroot\gesture.png
+wwwroot\github.png
 wwwroot\icon-192.png
 wwwroot\Imen Jouini CV.pdf
 wwwroot\istmt.png
+wwwroot\ktob.png
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
@@ -55,6 +58,7 @@ wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
 wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
 wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 wwwroot\LINK.png
+wwwroot\locatour.png
 wwwroot\logo.png
 wwwroot\logoicon.png
 wwwroot\photo.PNG
@@ -63,6 +67,7 @@ wwwroot\Sal.png
 wwwroot\sample-data\weather.json
 wwwroot\script.js
 wwwroot\style.css
+wwwroot\tms.png
 wwwroot\index.html
 C:\Projects\MyPortfolio\wwwroot\components\footer.js
 C:\Projects\MyPortfolio\wwwroot\components\navbar.js
