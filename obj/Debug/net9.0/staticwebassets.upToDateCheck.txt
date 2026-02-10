@@ -8,11 +8,14 @@ wwwroot\electio.png
 wwwroot\esprit.jpg
 wwwroot\favicon.png
 wwwroot\gesture.png
+wwwroot\github.pdf
 wwwroot\github.png
 wwwroot\icon-192.png
 wwwroot\Imen Jouini CV.pdf
+wwwroot\index.html
 wwwroot\istmt.png
 wwwroot\ktob.png
+wwwroot\le progres agricole.pdf
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
@@ -62,13 +65,16 @@ wwwroot\locatour.png
 wwwroot\logo.png
 wwwroot\logoicon.png
 wwwroot\photo.PNG
+wwwroot\ppt pfe Imen Jouini.pptx
+wwwroot\PPT Ymen [Enregistrement automatique].pptx
 wwwroot\proA.png
 wwwroot\Sal.png
 wwwroot\sample-data\weather.json
+wwwroot\Screenshot.png
 wwwroot\script.js
+wwwroot\short version electio.mp4
 wwwroot\style.css
 wwwroot\tms.png
-wwwroot\index.html
 C:\Projects\MyPortfolio\wwwroot\components\footer.js
 C:\Projects\MyPortfolio\wwwroot\components\navbar.js
 C:\Projects\MyPortfolio\wwwroot\css\app.css
