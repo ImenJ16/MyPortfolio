@@ -1,0 +1,28 @@
+NAME: Imen Jouini
+ROLE: Full-Stack Software Engineer
+
+EDUCATION:
+- Graduate Diploma in Biomedical Engineering (Medical Computer Science) from Higher Institution of Medical Technologies of Tunis (2022-2025)
+- Engineer's Degree in Computer Science (Software Engineering) from ESPRIT (2019-2021)
+
+TECHNICAL SKILLS:
+Languages: Java, Python, C#, JavaScript, C/C++, HTML/CSS
+Frameworks: .NET Blazor, Spring Boot, Angular, Flask, FastAPI, Bootstrap
+Databases: MySQL, SQL Server
+DevOps: Docker, Jenkins, Git, CI/CD
+AI: RAG Systems, LLMs, MediaPipe
+
+PROJECTS:
+- AI-Powered Travel Management System: RAG-based multilingual customer service agent with .NET 9, Blazor, FastAPI
+- BREATHE: Smart gas detection IoT solution (CEO role, won innovation awards)
+- DanceScape Explorer: Online dance competition platform with Spring Boot, Angular, Docker, Jenkins
+
+CONTACT:
+Phone: +216 97 534 723
+Location: Tunis, Tunisia
+Available for work: Yes
+
+AWARDS:
+- ESPRIT Projects Ball 11th Edition (June 2024)
+- Best Innovative Idea Award - Injaz Tunisia (September 2022)
+- Best Junior Enterprise Award - ISTMT (December 2021)
