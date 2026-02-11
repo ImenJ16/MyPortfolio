@@ -243,10 +243,12 @@
     justify-content: center;
     z-index: 2000;
     animation: fadeIn 0.3s ease;
+    pointer-events: none; /* ADD THIS */
 }
 
     .name-modal-overlay.active {
         display: flex;
+        pointer-events: auto; /* ADD THIS */
     }
 
 @keyframes fadeIn {
@@ -268,6 +270,7 @@
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
     animation: slideUp 0.3s ease;
     position: relative;
+    z-index: 2001; /* ADD THIS */
 }
 
 @keyframes slideUp {
@@ -318,6 +321,7 @@
     justify-content: center;
     border-radius: 8px;
     transition: all 0.2s;
+    z-index: 2002; /* ADD THIS */
 }
 
     .name-modal-close:hover {
@@ -351,6 +355,8 @@
         color: #e2e8f0;
         font-size: 14px;
         transition: all 0.2s;
+        position: relative; /* ADD THIS */
+        z-index: 1; /* ADD THIS */
     }
 
         .form-group input:focus {
@@ -379,6 +385,8 @@
     cursor: pointer;
     transition: all 0.3s;
     margin-top: 8px;
+    position: relative; /* ADD THIS */
+    z-index: 1; /* ADD THIS */
 }
 
     .name-submit-btn:hover {
@@ -429,7 +437,7 @@
 .name-ticker-content {
     display: inline-block;
     padding-left: 100%;
-    animation: scroll 35s linear infinite;
+    animation: scroll 60s linear infinite; /* Changed to 60s for slower scroll */
     color: #94a3b8;
     font-size: 12px;
 }

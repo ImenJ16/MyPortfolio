@@ -2,7 +2,7 @@
 const EMAILJS_CONFIG = {
     PUBLIC_KEY: 'umISSDzapbUFbZbrl',
     SERVICE_ID: 'service_kkvuxlf',
-    TEMPLATE_ID: 'template_g95mi8p'
+    TEMPLATE_ID: 'template_g95mi8p',
     NAME_TEMPLATE_ID: 'template_kc0rsgi' 
 
 };
