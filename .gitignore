@@ -1,0 +1,48 @@
+
+# Visual Studio
+.vs/
+.vscode/
+*.user
+*.suo
+*.cache
+
+# Build results
+bin/
+obj/
+Debug/
+Release/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+
+# Environment variables
+.env
+chatbot/.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
