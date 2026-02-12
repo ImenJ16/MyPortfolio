@@ -1,4 +1,34 @@
 ﻿// chatbot-widget.js
+
+// Bad words filter (add Tunisian/Arabic transliterations)
+const BLOCKED_WORDS = [
+    // English
+    'fuck', 'shit', 'bitch', 'ass', 'damn', 'fck', 'fuk', 'sh1t', 'b1tch', 'wtf',
+    'cunt', 'dick', 'cock', 'pussy', 'bastard', 'whore', 'slut',
+    // Tunisian dialect (transliterated - add more as needed)
+    'kahba', 'khra', 'miboun', 'zebbi', 'a7ba', 'nikk', 'nik', 'kess',
+    'kess emmek', 'kessemek', 'omek', 'tfo', '3asba', 'nayek', '3ataya', 'mibouna', '9a7ba', 'nayyek', 'nayek', 'zeb', 'zebi', 'sorm', 'sormk', 'sormek', 'niik', 'nayek', 'asba',
+    // Common variations
+    'f*ck', 'sh*t', 'b*tch', 'fk', 'stfu'
+];
+
+function containsBadWords(text) {
+    const lowerText = text.toLowerCase()
+        .replace(/[0@]/g, 'o')  // Replace 0 and @ with o
+        .replace(/[1!]/g, 'i')  // Replace 1 and ! with i
+        .replace(/[3]/g, 'e')   // Replace 3 with e
+        .replace(/[$]/g, 's')   // Replace $ with s
+        .replace(/[5]/g, 's')   // Replace 5 with s
+        .replace(/[7]/g, 'h')   // Replace 7 with h (Tunisian)
+        .replace(/[9]/g, 'q');  // Replace 9 with q (Tunisian)
+
+    return BLOCKED_WORDS.some(word => {
+        // Check if word appears as whole word or part of text
+        const regex = new RegExp(`\\b${word}\\b|${word}`, 'i');
+        return regex.test(lowerText);
+    });
+}
+
 class ChatbotWidget {
     constructor() {
         this.isOpen = false;
@@ -38,7 +68,7 @@ class ChatbotWidget {
                     <div id="chatbot-messages" class="chatbot-messages">
                         <div class="message bot-message">
                             <div class="message-content">
-                                Hi! I'm Imen's AI assistant. Ask me anything about her background, skills, projects, or experience! Or leave a message !
+                                👋 Hi! I'm Imen's AI assistant. Ask me anything about her background, skills, projects, or experience!
                             </div>
                         </div>
                     </div>
@@ -186,6 +216,18 @@ class ChatbotWidget {
         const successMessage = document.getElementById('name-success-message');
 
         if (!suggestedName) return;
+
+        // CHECK FOR BAD WORDS
+        if (containsBadWords(suggestedName)) {
+            alert('Please keep your suggestion appropriate and professional! 😊');
+            return;
+        }
+
+        // Also check suggester name for bad words
+        if (containsBadWords(suggesterName)) {
+            alert('Please keep your name appropriate! 😊');
+            return;
+        }
 
         // Disable button
         submitBtn.disabled = true;
