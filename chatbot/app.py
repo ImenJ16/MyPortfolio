@@ -4,7 +4,6 @@ import os
 from dotenv import load_dotenv
 from groq import Groq
 
-# Load environment variables
 load_dotenv()
 
 app = Flask(__name__)
@@ -17,57 +16,89 @@ CORS(app, resources={
         ]
     }
 })
+
 # Initialize Groq client
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
 # Load FAQ content
-def load_faq():
-    with open('faq.txt', 'r', encoding='utf-8') as file:
-        return file.read()
+with open('faq.txt', 'r', encoding='utf-8') as f:
+    faq_content = f.read()
 
-FAQ_CONTENT = load_faq()
+# Keywords that trigger message collection mode
+MESSAGE_KEYWORDS = [
+    'contact', 'message', 'email', 'hire', 'work together', 
+    'reach out', 'collaborate', 'project', 'opportunity',
+    'get in touch', 'send message', 'leave message'
+]
+
+def check_message_intent(user_message):
+    """Check if user wants to send a message to Imen"""
+    message_lower = user_message.lower()
+    
+    # Check for /message command
+    if message_lower.strip() == '/message':
+        return True
+    
+    # Check for keywords
+    return any(keyword in message_lower for keyword in MESSAGE_KEYWORDS)
+
+def get_chatbot_response(user_message):
+    """Get response from Groq API"""
+    
+    # Check if user wants to send a message
+    if check_message_intent(user_message):
+        return "I'd be happy to help you send a message to Imen! Let me collect your details.", True
+    
+    # Build the system prompt with FAQ context
+    system_prompt = f"""You are Imen Jouini's AI assistant. Your role is to answer questions about Imen based ONLY on the information below.
+
+STRICT RULES:
+1. ONLY answer questions about Imen Jouini
+2. If asked about anything else (weather, news, other people, general topics), politely say: "I can only answer questions about Imen Jouini. Please ask about her background, skills, projects, or experience!"
+3. Be friendly and professional
+4. Keep responses concise (2-3 sentences max)
+5. If you don't know something about Imen, say: "I don't have that information. You can contact Imen directly for more details!"
+
+INFORMATION ABOUT IMEN:
+{faq_content}
+
+Remember: Stay on topic about Imen ONLY!"""
+
+    try:
+        completion = client.chat.completions.create(
+            model="llama-3.1-8b-instant",
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_message}
+            ],
+            temperature=0.3,
+            max_tokens=300
+        )
+        
+        return completion.choices[0].message.content, False
+        
+    except Exception as e:
+        return f"Sorry, I encountered an error: {str(e)}", False
 
 @app.route('/chat', methods=['POST'])
 def chat():
-    user_message = request.json.get('message', '')
-    
-    if not user_message:
-        return jsonify({'error': 'No message provided'}), 400
-    
     try:
-        # Create the response using Groq
-        response = get_chatbot_response(user_message)
-        return jsonify({'response': response})
+        data = request.json
+        user_message = data.get('message', '')
+        
+        if not user_message:
+            return jsonify({'error': 'No message provided'}), 400
+        
+        # Get response and check if message mode should be triggered
+        response_text, trigger_message = get_chatbot_response(user_message)
+        
+        return jsonify({
+            'response': response_text,
+            'trigger_message_mode': trigger_message
+        })
+        
     except Exception as e:
         return jsonify({'error': str(e)}), 500
-
-def get_chatbot_response(user_message):
-    # This is the RAG part - we give the AI the context from FAQ
-    system_prompt = f"""You are Imen Jouini's personal assistant chatbot on her portfolio website.
-
-STRICT RULES:
-1. ONLY answer questions about Imen Jouini based on the context below
-2. If asked about ANYTHING else (weather, general knowledge, other people, etc.), politely say: "I'm here to answer questions about Imen Jouini and her work. Please ask me something about her background, skills, projects, or experience!"
-3. Be friendly, professional, and concise
-4. If the answer isn't in the context, say: "I don't have that specific information about Imen. You can reach out to her directly at +216 97 534 723 or check her resume."
-
-CONTEXT ABOUT IMEN JOUINI:
-{FAQ_CONTENT}
-
-Remember: ONLY answer questions about Imen. Refuse anything else politely."""
-
-    # Call Groq API
-    chat_completion = client.chat.completions.create(
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_message}
-        ],
-        model="llama-3.1-8b-instant",  # Fast, free model
-        temperature=0.3,  # Lower = more focused responses
-        max_tokens=300
-    )
-    
-    return chat_completion.choices[0].message.content
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
