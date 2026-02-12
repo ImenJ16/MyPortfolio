@@ -21,8 +21,8 @@ CORS(app, resources={
 client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
 # Load FAQ content
-with open('faq.txt', 'r', encoding='utf-8') as f:
-    faq_content = f.read()
+with open(os.path.join(os.path.dirname(__file__), 'faq.txt'), 'r', encoding='utf-8') as f:
+faq_content = f.read()  
 
 # Keywords that trigger message collection mode
 MESSAGE_KEYWORDS = [
