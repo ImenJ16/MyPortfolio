@@ -1,9 +1,14 @@
+﻿
+// -*- coding: utf-8 -*-
+
+
 // bot-names.js
 const APPROVED_BOT_NAMES = [
     "Genie in a widget",
-    "3ezzdine",
+    "Light Yagami",
     "Nef3a Batti5",
     "Portfolio HR Department",
+    "العملاق المهاجم",
     "The IT person"
 ];
 

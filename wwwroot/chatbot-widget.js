@@ -7,7 +7,7 @@ const BLOCKED_WORDS = [
     'cunt', 'dick', 'cock', 'pussy', 'bastard', 'whore', 'slut',
     // Tunisian dialect (transliterated - add more as needed)
     'kahba', 'khra', 'miboun', 'zebbi', 'a7ba', 'nikk', 'nik', 'kess',
-    'kess emmek', 'kessemek', 'omek', 'tfo', '3asba', 'nayek', '3ataya', 'mibouna', '9a7ba', 'nayyek', 'nayek', 'zeb', 'zebi', 'sorm', 'sormk', 'sormek', 'niik', 'nayek', 'asba',
+    'kess emmek', 'kessemek', 'omek', 'tfouh', '3asba', 'nayek', '3ataya', 'mibouna', '9a7ba', 'nayyek', 'nayek', 'zeb', 'zebi', 'sorm', 'sormk', 'sormek', 'niik', 'nayek', 'asba',
     // Common variations
     'f*ck', 'sh*t', 'b*tch', 'fk', 'stfu'
 ];
@@ -68,7 +68,7 @@ class ChatbotWidget {
                     <div id="chatbot-messages" class="chatbot-messages">
                         <div class="message bot-message">
                             <div class="message-content">
-                                👋 Hi! I'm Imen's AI assistant. Ask me anything about her background, skills, projects, or experience!
+                                Hi! I'm Imen's AI assistant. Ask me anything about her background, skills, projects, experience, or simply leave a message !
                             </div>
                         </div>
                     </div>

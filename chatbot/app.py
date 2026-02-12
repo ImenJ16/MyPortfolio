@@ -8,8 +8,15 @@ from groq import Groq
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)  # Allow requests from your HTML page
-
+CORS(app, resources={
+    r"/chat": {
+        "origins": [
+            "https://imenj16.github.io",
+            "http://localhost:*",
+            "http://127.0.0.1:*"
+        ]
+    }
+})
 # Initialize Groq client
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
@@ -63,4 +70,5 @@ Remember: ONLY answer questions about Imen. Refuse anything else politely."""
     return chat_completion.choices[0].message.content
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=False)
