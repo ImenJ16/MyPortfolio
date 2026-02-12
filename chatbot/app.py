@@ -28,7 +28,7 @@ with open('faq.txt', 'r', encoding='utf-8') as f:
 MESSAGE_KEYWORDS = [
     'contact', 'message', 'email', 'hire', 'work together', 
     'reach out', 'collaborate', 'project', 'opportunity',
-    'get in touch', 'send message', 'leave message'
+    'get in touch', 'send message', 'leave message', 'connect', 'network', 'partnership', 'inquiry','talk to imen', 'speak with imen', 'contact imen', 'message imen', 'email imen'
 ]
 
 def check_message_intent(user_message):
