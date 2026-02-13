@@ -63,13 +63,27 @@
           background: linear-gradient(to right, #6366f1, #10b981);
         }
         
-        .mobile-menu-btn {
-          display: none;
-          background: none;
-          border: none;
-          color: #f8fafc;
-          cursor: pointer;
-        }
+    .mobile-menu-btn {
+  display: none;
+  background: rgba(99, 102, 241, 0.2);
+  border: 2px solid rgba(99, 102, 241, 0.5);
+  border-radius: 8px;
+  padding: 8px;
+  color: #f8fafc;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-btn svg {
+  width: 28px !important;
+  height: 28px !important;
+  stroke: #f8fafc !important;
+  stroke-width: 2.5 !important;
+  display: block !important;
+}
         
         @media (max-width: 768px) {
           .nav-links {
