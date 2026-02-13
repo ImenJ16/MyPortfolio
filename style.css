@@ -642,3 +642,27 @@ img {
         margin-bottom: 2rem;
     }
 }
+
+
+/* Mobile Navbar Hamburger Fix */
+.navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 2px solid rgba(255, 255, 255, 0.5) !important;
+    padding: 0.5rem 0.75rem !important;
+    border-radius: 0.375rem !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+    display: inline-block !important;
+}
+
+/* Make sure it's visible on all screen sizes */
+@media (max-width: 768px) {
+    .navbar-toggler {
+        display: block !important;
+        visibility: visible !important;
+    }
+}
