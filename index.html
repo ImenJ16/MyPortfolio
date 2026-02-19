@@ -541,7 +541,7 @@
 
                             <h3 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">StudioAlAmal</h3>
                             <p class="text-gray-400 mb-4 leading-relaxed line-clamp-5">
-                                Personal microservices-based platform featuring JWT authentication and unified third-party data aggregation.
+                                Photography Studio microservices-based platform featuring JWT authentication and unified third-party data aggregation.
                             </p>
 
                             <div class="flex flex-wrap gap-2 mb-6">
@@ -1042,68 +1042,106 @@
 
 
 
-        <!-- Skills, Languages & Interests Section -->
-        <section id="skills-languages-interests" class="py-20">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-4">Beyond Tech</h2>
-                <p class="text-lg opacity-90 max-w-2xl mx-auto mt-4">
-                    Soft skills, languages, and personal interests
-                </p>
+        <!-- Soft Skills -->
+        <div class="bg-dark/50 border border-gray-800 rounded-xl p-6 space-y-4">
+            <h3 class="text-xl font-bold text-primary">Soft Skills</h3>
+            <ul class="space-y-2 text-gray-300">
+                <li class="flex items-center gap-2">
+                    <span class="text-primary">▸</span> Leadership
+                </li>
+                <li class="flex items-center gap-2">
+                    <span class="text-primary">▸</span> Communication
+                </li>
+                <li class="flex items-center gap-2 cursor-pointer public-speaking-trigger" onclick="openSpeakingGallery()">
+                    <span class="text-primary">▸</span>
+                    <span class="speaking-text">Public Speaking</span>
+                    <span class="text-xs text-gray-500 ml-2">📸 Click to view</span>
+                </li>
+                <li class="flex items-center gap-2">
+                    <span class="text-primary">▸</span> Problem Solving
+                </li>
+                <li class="flex items-center gap-2">
+                    <span class="text-primary">▸</span> Time Management
+                </li>
+            </ul>
+        </div>
+
+        <!-- Speaking Gallery Modal -->
+        <div id="speaking-modal" class="speaking-modal">
+            <div class="speaking-modal-content">
+                <button class="speaking-modal-close" onclick="closeSpeakingGallery()">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+
+                <h2 class="speaking-modal-title">Public Speaking</h2>
+                <p class="speaking-modal-subtitle">Conferences, presentations, and panel discussions</p>
+
+                <div class="speaking-modal-grid">
+                    <!-- Photo 1 -->
+                    <div class="speaking-modal-card">
+                        <img src="/github.png" alt="Tech Conference 2025">
+                        <div class="speaking-modal-info">
+                            <h3>Tech Conference 2025</h3>
+                            <p>AI & Software Engineering Panel</p>
+                            <span class="speaking-modal-date">📍 Tunis • March 2025</span>
+                        </div>
+                    </div>
+
+                    <!-- Photo 2 -->
+                    <div class="speaking-modal-card">
+                        <img src="/esprit.jpg" alt="ESPRIT Showcase">
+                        <div class="speaking-modal-info">
+                            <h3>ESPRIT Project Showcase</h3>
+                            <p>Cruise Management System Demo</p>
+                            <span class="speaking-modal-date">📍 ESPRIT • June 2024</span>
+                        </div>
+                    </div>
+
+                    <!-- Photo 3 -->
+                    <div class="speaking-modal-card">
+                        <img src="/amal.png" alt="Developer Panel">
+                        <div class="speaking-modal-info">
+                            <h3>Career in Tech Panel</h3>
+                            <p>Software Engineering Discussion</p>
+                            <span class="speaking-modal-date">📍 Tunisia Tech Hub • Jan 2025</span>
+                        </div>
+                    </div>
+
+                    <!-- Photo 4 -->
+                    <div class="speaking-modal-card">
+                        <img src="/breathe.png" alt="Workshop">
+                        <div class="speaking-modal-info">
+                            <h3>RAG Systems Workshop</h3>
+                            <p>Teaching AI Integration</p>
+                            <span class="speaking-modal-date">📍 Developer Meetup • Dec 2024</span>
+                        </div>
+                    </div>
+
+                    <!-- Photo 5 -->
+                    <div class="speaking-modal-card">
+                        <img src="/favicon.png" alt="University Talk">
+                        <div class="speaking-modal-info">
+                            <h3>University Guest Lecture</h3>
+                            <p>Modern Web Development</p>
+                            <span class="speaking-modal-date">📍 University • Nov 2024</span>
+                        </div>
+                    </div>
+
+                    <!-- Photo 6 -->
+                    <div class="speaking-modal-card">
+                        <img src="/istmt.png" alt="Tech Interview">
+                        <div class="speaking-modal-info">
+                            <h3>Tech Podcast Interview</h3>
+                            <p>Journey into Software Engineering</p>
+                            <span class="speaking-modal-date">📍 Online • Oct 2024</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- Soft Skills -->
-                <div class="bg-dark/50 border border-gray-800 rounded-xl p-6 space-y-4">
-                    <h3 class="text-xl font-bold text-primary">Soft Skills</h3>
-                    <ul class="space-y-2 text-gray-300">
-                        <li>Leadership</li>
-                        <li>Communication</li>
-                        <li>Creativity</li>
-                        <li>Problem Solving</li>
-                        <li>Time Management</li>
-                    </ul>
-                </div>
-
-                <!-- Languages -->
-                <div class="bg-dark/50 border border-gray-800 rounded-xl p-6 space-y-4">
-                    <h3 class="text-xl font-bold text-primary">Languages</h3>
-                    <ul class="space-y-3 text-gray-300">
-                        <li>
-                            <span class="font-medium">English</span> — Advanced
-                            <span class="block text-sm text-gray-400">
-                                B2 (APTIS – British Council, 2020) / C1 (ESPRIT, 2024)
-                            </span>
-                        </li>
-                        <li>
-                            <span class="font-medium">French</span> — Advanced
-                            <span class="block text-sm text-gray-400">
-                                B2 (ESPRIT, 2024)
-                            </span>
-                        </li>
-                        <li>
-                            <span class="font-medium">Spanish</span> — Beginner
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Hobbies & Interests -->
-                <div class="bg-dark/50 border border-gray-800 rounded-xl p-6 space-y-4">
-                    <h3 class="text-xl font-bold text-primary">Hobbies & Interests</h3>
-                    <ul class="space-y-2 text-gray-300">
-                        <li>Reading & Writing</li>
-                        <li>Photography</li>
-                        <li>Content creation</li>
-                        <li>Public speaking</li>
-                    </ul>
-                </div>
-
-            </div>
-        </section>
-
-
-
-
+        </div>
 
 
         <!-- Education Section -->
@@ -1273,7 +1311,34 @@
 
     <script src="chatbot-widget.js"></script>
     <script src="emailjs-config.js"></script>
-    <script src="bot-names.js"></script> 
+    <script src="bot-names.js"></script>
+    <script>
+        function openSpeakingGallery() {
+            const modal = document.getElementById('speaking-modal');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        function closeSpeakingGallery() {
+            const modal = document.getElementById('speaking-modal');
+            modal.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        // Close on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeSpeakingGallery();
+            }
+        });
+
+        // Close on background click
+        document.getElementById('speaking-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'speaking-modal') {
+                closeSpeakingGallery();
+            }
+        });
+    </script>
 </body>
 </html>
 
