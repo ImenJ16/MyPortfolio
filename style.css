@@ -802,6 +802,7 @@ img {
     justify-content: center;
     height: 250px;
     overflow: hidden;
+    position: relative;
 }
 
     .speaking-modal-card img {
