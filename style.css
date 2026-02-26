@@ -908,3 +908,70 @@ img {
         height: 180px;
     }
 }
+/* Glowing bullet with pulse */
+.speaking-bullet {
+    color: #6366f1;
+    animation: bulletPulse 2s ease-in-out infinite;
+    display: inline-block;
+}
+
+@keyframes bulletPulse {
+    0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0px #6366f1);
+    }
+
+    50% {
+        transform: scale(1.2);
+        filter: drop-shadow(0 0 8px #6366f1);
+    }
+}
+
+/* Gradient animated text */
+.speaking-text {
+    background: linear-gradient(135deg, #6366f1, #10b981, #6366f1);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientPulse 3s ease infinite;
+    font-weight: 700;
+    font-size: 1.05em;
+}
+
+/* Badge with shimmer */
+.speaking-badge {
+    font-size: 0.75rem;
+    color: #10b981;
+    background: linear-gradient(90deg, rgba(99,102,241,0.1), rgba(16,185,129,0.2), rgba(99,102,241,0.1));
+    background-size: 200% 100%;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(99,102,241,0.3);
+    animation: shimmer 3s ease infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Hover effect */
+.public-speaking-trigger:hover {
+    transform: translateX(12px);
+    filter: brightness(1.2);
+}
+
+    .public-speaking-trigger:hover .speaking-bullet {
+        animation: bulletPulse 0.8s ease-in-out infinite;
+    }
+
+    .public-speaking-trigger:hover .speaking-badge {
+        animation: shimmer 1s ease infinite;
+        border-color: #10b981;
+    }
