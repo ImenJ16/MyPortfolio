@@ -1300,10 +1300,10 @@
                         </div>
                     </div>
                     <div class="pt-3 border-t border-gray-800/50">
-                        <a href="https://github.com/ImenJ16/MyPortfolio/releases/download/v1.0.0/bal.mp4" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-primary text-sm font-semibold hover:gap-2 transition-all group/link">
-                            <span>Have a Look (edit credit: Hadil Derbali)</span>
-                            <i data-feather="external-link" class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform"></i>
-                        </a>
+                        <button onclick="openVideoModal('https://github.com/ImenJ16/MyPortfolio/releases/download/v1.0.0/bal.mp4', 'Edit credit: Hadil Derbali')" class="inline-flex items-center text-primary text-sm font-semibold hover:gap-2 transition-all group/link">
+                            <span>Watch Video</span>
+                            <i data-feather="play-circle" class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -1324,10 +1324,10 @@
                         </div>
                     </div>
                     <div class="pt-3 border-t border-gray-800/50">
-                        <a href="https://github.com/ImenJ16/MyPortfolio/releases/download/v1.0.0/injaz.mp4" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-primary text-sm font-semibold hover:gap-2 transition-all group/link">
-                            <span>Have a Look (edit credit: Takwa Chrif)</span>
-                            <i data-feather="external-link" class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform"></i>
-                        </a>
+                        <button onclick="openVideoModal('https://github.com/ImenJ16/MyPortfolio/releases/download/v1.0.0/injaz.mp4', 'Edit credit: Takwa Chrif')" class="inline-flex items-center text-primary text-sm font-semibold hover:gap-2 transition-all group/link">
+                            <span>Watch Video</span>
+                            <i data-feather="play-circle" class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -1395,6 +1395,51 @@
             if (e.target.id === 'speaking-modal') {
                 closeSpeakingGallery();
             }
+        });
+    </script>
+    <!-- Video Modal -->
+    <div id="video-modal" class="video-modal" onclick="closeVideoModal()">
+        <div class="video-modal-content" onclick="event.stopPropagation()">
+            <button class="video-modal-close" onclick="closeVideoModal()">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <video id="modal-video" controls>
+                <source src="" type="video/mp4">
+            </video>
+            <p id="video-credit" class="video-credit"></p>
+        </div>
+    </div>
+
+    <script>
+        function openVideoModal(videoUrl, credit) {
+            const modal = document.getElementById('video-modal');
+            const video = document.getElementById('modal-video');
+            const creditText = document.getElementById('video-credit');
+
+            video.querySelector('source').src = videoUrl;
+            video.load();
+            creditText.textContent = credit;
+
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('video-modal');
+            const video = document.getElementById('modal-video');
+
+            video.pause();
+            video.querySelector('source').src = '';
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeVideoModal();
         });
     </script>
 </body>

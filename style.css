@@ -975,3 +975,99 @@ img {
         animation: shimmer 1s ease infinite;
         border-color: #10b981;
     }
+
+/* ============================================
+   VIDEO MODAL
+   ============================================ */
+
+.video-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 99999;
+    padding: 2rem;
+    animation: fadeIn 0.3s ease;
+}
+
+    .video-modal.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.video-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.video-modal video {
+    width: 100%;
+    max-height: 80vh;
+    border-radius: 1rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+}
+
+.video-credit {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+}
+
+.video-modal-close {
+    position: absolute;
+    top: -3.5rem;
+    right: 0;
+    background: rgba(99,102,241,0.1);
+    border: 2px solid rgba(99,102,241,0.3);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+    .video-modal-close:hover {
+        background: rgba(99,102,241,0.2);
+        border-color: rgba(99,102,241,0.5);
+        transform: rotate(90deg);
+    }
+
+    .video-modal-close svg {
+        color: #6366f1;
+    }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .video-modal {
+        padding: 1rem;
+    }
+
+    .video-modal-close {
+        top: 1rem;
+        right: 1rem;
+        width: 40px;
+        height: 40px;
+    }
+
+    .video-modal video {
+        max-height: 70vh;
+    }
+}
