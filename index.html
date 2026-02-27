@@ -485,10 +485,14 @@
                         </div>
 
                         <div class="px-6 pb-6">
-                            <a href="https://github.com/ImenJ16/MyPortfolio/releases/download/v1.0.0/short%20version%20electio.mp4" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-primary font-semibold group/link hover:gap-3 transition-all relative z-20">
-                                <span>See More</span>
-                                <i data-feather="arrow-right" class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform"></i>
-                            </a>
+                            <div class="speaking-modal-card">
+                                <button onclick="openVideoModal('https://github.com/ImenJ16/MyPortfolio/releases/download/v1.0.0/esprit.mp4', 'Tech Interview')"
+                                        class="speaking-modal-caption">
+                                    click here to play!
+                                </button>
+
+                                <img src="injaz.png" alt="Tech Interview">
+                            </div>
                         </div>
 
                         <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
@@ -1190,7 +1194,9 @@
                     </div>
 
                     <div class="speaking-modal-card">
-                        <a href="https://github.com/ImenJ16/MyPortfolio/releases/download/v1.0.0/esprit.mp4" target="_blank" class="speaking-modal-caption">
+                        <a href="#"
+                           onclick="event.preventDefault(); openVideoModal('https://github.com/ImenJ16/MyPortfolio/releases/download/v1.0.0/esprit.mp4', 'Tech Interview');"
+                           class="speaking-modal-caption">
                             click here to play!
                         </a>
                         <img src="injaz.png" alt="Tech Interview">
