@@ -12,8 +12,9 @@ const BLOCKED_WORDS = [
     'f*ck', 'sh*t', 'b*tch', 'fk', 'stfu'
 ];
 
-function containsBadWords(text) {
-    const lowerText = text.toLowerCase()
+// Turns look-alike characters into letters so "sh1t" or "a7ba" are caught
+function normalizeText(text) {
+    return text.toLowerCase()
         .replace(/[0@]/g, 'o')  // Replace 0 and @ with o
         .replace(/[1!]/g, 'i')  // Replace 1 and ! with i
         .replace(/[3]/g, 'e')   // Replace 3 with e
@@ -21,12 +22,39 @@ function containsBadWords(text) {
         .replace(/[5]/g, 's')   // Replace 5 with s
         .replace(/[7]/g, 'h')   // Replace 7 with h (Tunisian)
         .replace(/[9]/g, 'q');  // Replace 9 with q (Tunisian)
+}
 
-    return BLOCKED_WORDS.some(word => {
-        // Check if word appears as whole word or part of text
-        const regex = new RegExp(`\\b${word}\\b|${word}`, 'i');
-        return regex.test(lowerText);
-    });
+function escapeRegex(str) {
+    return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+// Build the regex list once. The blocked words are normalized the same way as
+// the user text, so entries like "a7ba" or "3asba" actually match.
+// Short plain words (4 letters or fewer, like "ass" or "nik") only match as
+// whole words, so normal words like "assistant" or "Nikola" are not blocked.
+const BLOCKED_REGEXES = BLOCKED_WORDS.map(word => {
+    const normalized = normalizeText(word);
+    const escaped = escapeRegex(normalized);
+    const isPlain = /^[a-z ]+$/.test(normalized);
+    const pattern = (isPlain && normalized.length <= 4)
+        ? `\\b${escaped}\\b`
+        : escaped;
+    return new RegExp(pattern, 'i');
+});
+
+function containsBadWords(text) {
+    const normalized = normalizeText(text);
+    return BLOCKED_REGEXES.some(regex => regex.test(normalized));
+}
+
+// Escapes user/bot text so it can never inject HTML into the page
+function escapeHTML(str) {
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
 }
 
 class ChatbotWidget {
@@ -234,6 +262,10 @@ class ChatbotWidget {
         submitBtn.textContent = 'Sending...';
 
         try {
+            if (typeof emailjs === 'undefined') {
+                throw new Error('EmailJS library is not loaded on this page');
+            }
+
             const templateParams = {
                 suggested_name: suggestedName,
                 suggester_name: suggesterName,
@@ -263,7 +295,10 @@ class ChatbotWidget {
             }, 3000);
 
         } catch (error) {
-            alert('Error sending suggestion. Please try again!');
+            // Full details go to the browser console (F12 > Console)
+            console.error('EmailJS error (name suggestion):', error);
+            const reason = (error && (error.text || error.message)) || 'unknown error';
+            alert('Error sending suggestion: ' + reason);
             submitBtn.disabled = false;
             submitBtn.textContent = 'Submit Suggestion';
         }
@@ -330,8 +365,9 @@ class ChatbotWidget {
                 this.addMessage('Sorry, I encountered an error. Please try again!', 'bot');
             }
         } catch (error) {
+            console.error('Backend error:', error);
             this.hideTyping();
-            this.addMessage('Connection error. Make sure the backend is running!', 'bot');
+            this.addMessage('I could not reach the server. It may be waking up, so please try again in about a minute!', 'bot');
         }
     }
 
@@ -379,6 +415,10 @@ class ChatbotWidget {
         this.showTyping();
 
         try {
+            if (typeof emailjs === 'undefined') {
+                throw new Error('EmailJS library is not loaded on this page');
+            }
+
             const templateParams = {
                 from_name: this.messageData.name,
                 user_email: this.messageData.email,
@@ -401,10 +441,13 @@ class ChatbotWidget {
             this.messageData = {};
 
         } catch (error) {
+            // Full details go to the browser console (F12 > Console)
+            console.error('EmailJS error (contact message):', error);
             this.hideTyping();
-            this.addMessage('❌ Sorry, there was an error sending your message. Please try again or email Imen directly at your convenience.', 'bot');
+            this.addMessage('❌ Sorry, there was an error sending your message. Please try again later or contact Imen directly.', 'bot');
             this.messageMode = false;
             this.messageStep = 0;
+            this.messageData = {};
         }
     }
 
@@ -412,7 +455,9 @@ class ChatbotWidget {
         const messagesContainer = document.getElementById('chatbot-messages');
         const messageDiv = document.createElement('div');
         messageDiv.className = `message ${sender}-message`;
-        messageDiv.innerHTML = `<div class="message-content">${text}</div>`;
+        // Escape the text so visitors can't inject HTML, keep line breaks
+        const safeText = escapeHTML(text).replace(/\n/g, '<br>');
+        messageDiv.innerHTML = `<div class="message-content">${safeText}</div>`;
         messagesContainer.appendChild(messageDiv);
         messagesContainer.scrollTop = messagesContainer.scrollHeight;
     }
