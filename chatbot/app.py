@@ -20,35 +20,43 @@ CORS(app, resources={
 # Initialize Groq client
 client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
+# Model can be changed from Render's Environment tab (GROQ_MODEL) without editing code
+MODEL = os.environ.get("GROQ_MODEL", "openai/gpt-oss-20b")
+
 # Load FAQ content
 with open(os.path.join(os.path.dirname(__file__), 'FAQ.txt'), 'r', encoding='utf-8') as f:
-    faq_content = f.read()  
+    faq_content = f.read()
 
-# Keywords that trigger message collection mode
+# Specific phrases that trigger message collection mode
+# (vague single words like "project" or "message" were removed so normal
+# questions about Imen's projects get answered instead of opening the form)
 MESSAGE_KEYWORDS = [
-    'contact', 'message', 'email', 'hire', 'work together', 
-    'reach out', 'collaborate', 'project', 'opportunity',
-    'get in touch', 'send message', 'leave message', 'connect', 'network', 'partnership', 'inquiry','talk to imen', 'speak with imen', 'contact imen', 'message imen', 'email imen'
+    'contact imen', 'message imen', 'email imen', 'talk to imen',
+    'speak with imen', 'get in touch', 'reach out', 'work together',
+    'send message', 'leave message', 'leave a message', 'send a message',
+    'hire', 'collaborate'
 ]
+
 
 def check_message_intent(user_message):
     """Check if user wants to send a message to Imen"""
     message_lower = user_message.lower()
-    
+
     # Check for /message command
     if message_lower.strip() == '/message':
         return True
-    
+
     # Check for keywords
     return any(keyword in message_lower for keyword in MESSAGE_KEYWORDS)
 
+
 def get_chatbot_response(user_message):
     """Get response from Groq API"""
-    
+
     # Check if user wants to send a message
     if check_message_intent(user_message):
         return "I'd be happy to help you send a message to Imen! Let me collect your details.", True
-    
+
     # Build the system prompt with FAQ context
     system_prompt = f"""You are Imen Jouini's AI assistant. Your role is to answer questions about Imen based ONLY on the information below.
 
@@ -66,44 +74,55 @@ Remember: Stay on topic about Imen ONLY!"""
 
     try:
         completion = client.chat.completions.create(
-            model="llama-3.1-8b-instant",
+            model=MODEL,
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_message}
             ],
             temperature=0.3,
-            max_tokens=300
+            # gpt-oss models "think" first and that counts toward the limit,
+            # so 300 was too low and could produce empty answers
+            max_tokens=1024
         )
-        
-        return completion.choices[0].message.content, False
-        
+
+        reply = completion.choices[0].message.content
+        if not reply:
+            reply = "Sorry, I couldn't come up with an answer. Please try rephrasing!"
+        return reply, False
+
     except Exception as e:
-        return f"Sorry, I encountered an error: {str(e)}", False
+        # Full error goes to Render logs, visitors see a friendly message
+        print(f"Groq error: {e}")
+        return "Sorry, I'm having trouble right now. Please try again in a moment!", False
+
 
 @app.route('/chat', methods=['POST'])
 def chat():
     try:
         data = request.json
         user_message = data.get('message', '')
-        
+
         if not user_message:
             return jsonify({'error': 'No message provided'}), 400
-        
+
         # Get response and check if message mode should be triggered
         response_text, trigger_message = get_chatbot_response(user_message)
-        
+
         return jsonify({
             'response': response_text,
             'trigger_message_mode': trigger_message
         })
-        
+
     except Exception as e:
-        return jsonify({'error': str(e)}), 500
+        print(f"Chat route error: {e}")
+        return jsonify({'error': 'Something went wrong'}), 500
+
 
 @app.route('/', methods=['GET'])
 @app.route('/health', methods=['GET'])
 def health_check():
     return jsonify({'status': 'healthy', 'service': 'chatbot-api'}), 200
+
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
