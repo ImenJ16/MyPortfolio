@@ -6,10 +6,8 @@
 const APPROVED_BOT_NAMES = [
     "Genie in a widget",
     "Light Yagami",
-    "Nef3a Batti5",
-    "Portfolio HR Department",
-    "العملاق المهاجم",
-    "The IT person"
+   
+    "Portfolio HR Department"
 ];
 
 // Function to get a random name
